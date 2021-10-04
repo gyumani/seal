@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+#couple_info{
+    display: flex; justify-content: space-between;
+    width: 90%; margin-left:5%;
+}
+.main_info{
+    display: flex; justify-content: space;
+    width: 40%; height:150px;
+    background: #fff;
+    border-radius: 100px;
+}
+.main_profile_picture {
+    width: 100px; height:100px; margin: 25px;
+    border-radius: 50px; background:#002356;
+}
+.main_profile_info {
+    margin: 30px; 
+}
+.main_profile_nickname{
+    font-weight: bold; font-size: 24px;
+}
+.sex {
+    display: inline-block; margin-left:10px;
+    font-size:18px;
+}
+.main_profile_birth{
+    margin-top: 10px; font-size:16px;
+}
+.main_profile_id{
+    margin-top:10px; color:#c8c8c8;
+}
+
+#heart_circle{
+    margin-top:25px;
+    width:100px; height:100px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 145px;
+    background: #fff;
+}
+#heart_circle i {
+    color:#ff9999; font-size:70px;
+}
+
+
+#first_meet {
+    width:50%; height: 100px; 
+    background:#fff; margin: 30px 25%;
+    border-radius: 10px;
+    text-align: center;
+}
+#first_meet_title{
+    padding-top:10px; font-size: 18px;
+}
+#first_meet_title span{
+    color:#ff7700; margin-left:5px;
+}
+#first_meet_content{
+    margin-top: 10px;
+    font-size:24px;
+}
+#first_meet_content span{
+    font-weight: bold; 
+}
+#event_log{
+    width: 90%; margin: 70px 5%;
+    border-radius: 10px;
+}
+#event_log_title{
+    width:30%; height: 50px; margin-left:35%;
+    line-height: 50px; text-align: center;
+    background:#fff; font-size:20px; border-radius: 5px;
+}
+#event_log_content{
+    width:100%; padding:20px; margin-top:20px;
+    background:#fff; border-radius: 5px;
+}
+.chead { margin-bottom: 15px;}
+.chead > p{
+    font-weight: bold; font-size: 18px;
+}
+.event_log_content_column{
+    position:relative;
+    width: 70%; height:20px; margin-left:15%;
+    margin-top: 10px;
+}
+.event_log_content_title{
+    position:absolute; left:0; top:0;
+}
+.event_log_content_text{
+    position:absolute; left:200px; top:0;
+}
+.event_log_content_date{
+    position:absolute; left:500px; top:0;
+}

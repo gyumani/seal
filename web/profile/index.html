@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seal</title>
+    <link rel="shortcut icon" href="/resources/image/favicon.ico">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/join.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <script src="https://kit.fontawesome.com/dc1a0d5709.js" crossorigin="anonymous"></script>
+    <script defer src="/js/profile.js"></script>
+</head>
+<style>
+  
+</style>
+<body> 
+    <header>
+        <h1 id="logo"><a href="/web/main/index.html">Seal</a></h1>
+        <nav>
+            <ul id='top_menu'>
+                <li class='sub_menu'>
+                    <a href = "/web/maps/index.html" id="maps_btn" class="icon"><i class="far fa-map"></i></a>
+                </li>
+                <li class='sub_menu'>
+                    <a href = "/web/profile/index.html" id="profile_btn" class="icon"><i class="fas fa-user-circle"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div id="profile_box">
+            <div id="profile_info">
+                <div id="profile_picture">
+
+                </div>
+                <div id="profile_idx">
+                    <span id="profile_nickname">DangGu</span>
+                    <a id="profile_homepage" href="#">https://DangGu.com</a>
+                    <p id="profile_infomation">반갑습니다. 댕구에요</p>
+                </div>
+                <div id="follow_box">
+                    <div id="follow">
+                        <p>follow</p>
+                        <a href="#">01</a>
+                    </div>
+                    <div id="follower">
+                        <p>follower</p>
+                        <a href="#">01</a>
+                    </div>
+                </div>
+                <button id="profile_config" onclick="openConfig();" ><i class="fas fa-cog"></i></button>
+            </div>
+            <div id="profile_btn_box">
+                <button id="follow_btn" class="btn profile_btn">팔로우</button>
+                <button id="upload_post_btn" class="btn profile_btn"">사진 업로드</button>
+            </div>
+        </div>
+        <div id="profile_photo_Layer">
+            <p>게시물이 존재하지 않습니다.</p>
+        </div>
+    </section>
+    <div class="modal_dark none" id="modal_background">
+        <ul id="config_menu">
+            <button class="btn" id="modal_close" onclick="closeConfig();">X</button>
+            <li><a id="personal_modify" class="menu_bar">정보 수정</a></li>
+            <li><a id="profile_modify" class="menu_bar">프로필 수정</a></li>
+            <li><a id="log_out" href="/web/login/login.html" class="menu_bar">로그아웃</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.login_container{
+    position:absolute; left:50%; top:50%;
+    width: 400px; height: 500px; 
+    margin: -250px 0 0 -200px;
+    background:#fff;
+    border-radius:20px;
+}
+
+.login_box{
+    position:absolute; left:50%; top:50px;
+    width:300px; margin-left: -150px;
+    text-align: center;
+}
+
+#login_logo{ font-size:50px; }
+.login_box form{ width: 100%; margin-top:40px; }
+.login_box form input{ margin-top: 15px; }
+.login_input{ width:80%; height: 30px; padding:0 10%; border:0;  outline:0; border-bottom:2px #002356 solid; }
+
+#login_btn{ width:80%; margin:40px 0 0 10%; }
+
+#join_btn, #find_password{ width: 60%; margin-left:20%; text-align: center;}
+
+#find_password{
+    position:absolute; bottom:50px;
+}
+#join_btn{
+    position:absolute; bottom: 90px;
+}
