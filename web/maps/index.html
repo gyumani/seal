@@ -1,94 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seal</title>
-    <link rel="shortcut icon" href="/resources/image/favicon.ico">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/join.css">
-    <link rel="stylesheet" href="/css/profile.css">
-    <script src="https://kit.fontawesome.com/dc1a0d5709.js" crossorigin="anonymous"></script>
-</head>
-<style>
-    #map_album{
-        display: flex; justify-content: space-between;
-        width:100%; 
+    <link rel="shortcut icon" href="/resources/image/favicon.ico" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/login.css" />
+    <link rel="stylesheet" href="../../css/join.css" />
+    <link rel="stylesheet" href="../../css/profile.css" />
+    <script
+      src="https://kit.fontawesome.com/dc1a0d5709.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    #map_album {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
-    #direction_photo_album{
-        width:45%; height: 600px;
-        background: #fff; border-radius: 10px;
+    #direction_photo_album {
+      width: 45%;
+      height: 600px;
+      background: #fff;
+      border-radius: 10px;
     }
     #direction_photo_album p {
-        text-align: center; line-height: 600px;
-        font-size:20px;
+      text-align: center;
+      line-height: 600px;
+      font-size: 20px;
     }
-    #map{ width: 45%; height: 600px; }
-</style>
-<body>
+    #map {
+      width: 45%;
+      height: 600px;
+    }
+  </style>
+  <body>
     <header>
-        <h1 id="logo"><a href="/web/main/index.html">Seal</a></h1>
-        <nav>
-            <ul id='top_menu'>
-                <li class='sub_menu'>
-                    <a href = "/web/maps/index.html" id="maps_btn" class="icon"><i class="far fa-map"></i></a>
-                </li>
-                <li class='sub_menu'>
-                    <a href = "/web/profile/index.html" id="profile_btn" class="icon"><i class="fas fa-user-circle"></i></a>
-                </li>
-            </ul>
-        </nav>
+      <h1 id="logo"><a href="../main/index.html">Seal</a></h1>
+      <nav>
+        <ul id="top_menu">
+          <li class="sub_menu">
+            <a href="../maps/index.html" id="maps_btn" class="icon"
+              ><i class="far fa-map"></i
+            ></a>
+          </li>
+          <li class="sub_menu">
+            <a href="../profile/index.html" id="profile_btn" class="icon"
+              ><i class="fas fa-user-circle"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <section>
-        <div id="map_album">
-            <div id="direction_photo_album">
-                <p>게시물이 존재하지 않습니다.</p>
-            </div>
-            <div id="map"></div>
+      <div id="map_album">
+        <div id="direction_photo_album">
+          <p>게시물이 존재하지 않습니다.</p>
         </div>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=93c1fd2d86cbe64f4c1ed993501b2368"></script>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
-        <script>
-            var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-            var options = { //지도를 생성할 때 필요한 기본 옵션
-                center: new kakao.maps.LatLng(35.1, 126.8), //지도의 중심좌표.
-                level: 10 //지도의 레벨(확대, 축소 정도)
-            };
+        <div id="map"></div>
+      </div>
+      <script
+        type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=93c1fd2d86cbe64f4c1ed993501b2368"
+      ></script>
+      <script
+        type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"
+      ></script>
+      <script>
+        var container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
+        var options = {
+          //지도를 생성할 때 필요한 기본 옵션
+          center: new kakao.maps.LatLng(35.1, 126.8), //지도의 중심좌표.
+          level: 10, //지도의 레벨(확대, 축소 정도)
+        };
 
-            var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-            function setCenter() {            
-                // 이동할 위도 경도 위치를 생성합니다 
-                var moveLatLon = new kakao.maps.LatLng(35,1, 126.8);
-                
-                // 지도 중심을 이동 시킵니다
-                map.setCenter(moveLatLon);
-            }
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+        function setCenter() {
+          // 이동할 위도 경도 위치를 생성합니다
+          var moveLatLon = new kakao.maps.LatLng(35, 1, 126.8);
 
-            function panTo() {
-                // 이동할 위도 경도 위치를 생성합니다 
-                var moveLatLon = new kakao.maps.LatLng(35.1, 126.8);
-                
-                // 지도 중심을 부드럽게 이동시킵니다
-                // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-                map.panTo(moveLatLon);            
-            }
-            // 마커가 표시될 위치입니다 
-            var markerPosition  = new kakao.maps.LatLng(35.1, 126.8); 
+          // 지도 중심을 이동 시킵니다
+          map.setCenter(moveLatLon);
+        }
 
-            // 마커를 생성합니다
-            var marker = new kakao.maps.Marker({
-                position: markerPosition
-            });
+        function panTo() {
+          // 이동할 위도 경도 위치를 생성합니다
+          var moveLatLon = new kakao.maps.LatLng(35.1, 126.8);
 
-            // 마커가 지도 위에 표시되도록 설정합니다
-            marker.setMap(map);
+          // 지도 중심을 부드럽게 이동시킵니다
+          // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+          map.panTo(moveLatLon);
+        }
+        // 마커가 표시될 위치입니다
+        var markerPosition = new kakao.maps.LatLng(35.1, 126.8);
 
-            // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-            // marker.setMap(null);            
-        </script>
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+          position: markerPosition,
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+        // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+        // marker.setMap(null);
+      </script>
     </section>
-</body>
+  </body>
 </html>

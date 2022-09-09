@@ -1,42 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seal</title>
-    <link rel="shortcut icon" href="/resources/image/favicon.ico">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/join.css">
-    <link rel="stylesheet" href="/css/profile.css">
-    <script src="https://kit.fontawesome.com/dc1a0d5709.js" crossorigin="anonymous"></script>
-    <script defer src="/js/join.js"></script>
-</head>
-<body>
+    <link rel="shortcut icon" href="/resources/image/favicon.ico" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/login.css" />
+    <link rel="stylesheet" href="../../css/join.css" />
+    <link rel="stylesheet" href="../../css/profile.css" />
+    <script
+      src="https://kit.fontawesome.com/dc1a0d5709.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="../../js/join.js"></script>
+  </head>
+  <body>
     <div class="join_container">
-        <h1 id="join_logo"><a href="/web/main/index.html">Seal</a></h1>
-        <div class="notice_join">
-            <div class="notice_join_title"><h3>주의사항</h3></div>
-            <div class="notice_join_content">
-                <p>상대방이 회원가입을 하여야 연결이 가능합니다.</p>
-                <p>상대방의 아이디를 정확하게 입력해주세요.</p>
-            </div>
+      <h1 id="join_logo"><a href="../main/index.html">Seal</a></h1>
+      <div class="notice_join">
+        <div class="notice_join_title"><h3>주의사항</h3></div>
+        <div class="notice_join_content">
+          <p>상대방이 회원가입을 하여야 연결이 가능합니다.</p>
+          <p>상대방의 아이디를 정확하게 입력해주세요.</p>
         </div>
-        <form action="#" method="POST">
-            <input type="text" id="userId" placeholder="아이디를 입력해주세요" required>
-            <input type="password" id="pwd" placeholder="패스워드를 입력해주세요" required onchange="checkPwd()">
-            <input type="password" id="pwdCheck" placeholder="패스워드를 다시 입력해주세요" required onchange="checkPwd()">
-            <p id="checkPwdText" ></p>
-            <input type="text" id="nickname" placeholder="닉네임을 입력해주세요" required>
-            <input type="email" id="email" placeholder="이메일을 입력해주세요" required>
-            <input type="text" id="name" placeholder="이름을 입력해주세요" required>
-            <input type="text" id="mobile" placeholder="휴대전화번호를 입력해주세요" required>
-            <input type="text" id="anotherId" placeholder="상대방의 아이디를 입력해주세요" required>
-            <input type="submit" id="join_submit_btn" class="btn" value="회원가입">
-            <input type="reset" id="join_reset_btn" class="btn" value="다시쓰기">
-        </form>
+      </div>
+      <form action="#" method="POST">
+        <input
+          type="text"
+          id="userId"
+          placeholder="아이디를 입력해주세요"
+          required
+        />
+        <input
+          type="password"
+          id="pwd"
+          placeholder="패스워드를 입력해주세요"
+          required
+          onchange="checkPwd()"
+        />
+        <input
+          type="password"
+          id="pwdCheck"
+          placeholder="패스워드를 다시 입력해주세요"
+          required
+          onchange="checkPwd()"
+        />
+        <p id="checkPwdText"></p>
+        <input
+          type="text"
+          id="nickname"
+          placeholder="닉네임을 입력해주세요"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          placeholder="이메일을 입력해주세요"
+          required
+        />
+        <input
+          type="text"
+          id="name"
+          placeholder="이름을 입력해주세요"
+          required
+        />
+        <input
+          type="text"
+          id="mobile"
+          placeholder="휴대전화번호를 입력해주세요"
+          required
+        />
+        <input
+          type="text"
+          id="anotherId"
+          placeholder="상대방의 아이디를 입력해주세요"
+          required
+        />
+        <input
+          type="submit"
+          id="join_submit_btn"
+          class="btn"
+          value="회원가입"
+        />
+        <input type="reset" id="join_reset_btn" class="btn" value="다시쓰기" />
+      </form>
     </div>
-</body>
+  </body>
 </html>
