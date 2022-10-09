@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import JoinView from "../../Modules/Login/Join/JoinView";
+import LoginView from "../../Modules/Login/Login/LoginView";
 
-export class Login extends Component {
-  render() {
-    return <div>Login</div>;
-  }
+function Login() {
+  const [IsJoin, setIsJoin] = useState(false);
+  return <div>{IsJoin ? <JoinView /> : <LoginView />}</div>;
 }
 
 export default Login;
