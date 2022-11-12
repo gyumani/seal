@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="main_container">
-      {mainFlag === true ? <Main /> : <Login />}
+      <Main />
     </div>
   );
 }
